@@ -1,0 +1,320 @@
+@font-face {
+  font-family: Poppins;
+  src: url(Poppins-SemiBold.ttf);
+}
+:root {
+  --rosadito-fuerte: #970a39e1;
+  --rosadito-refuerte: rgb(65, 4, 22);
+  --rosadito: #ffd6f3;
+  --blanco-humo: #E1E8ED;
+  --rosadito-medio: #bd3768;
+  --rosadito-hover: rgb(120, 23, 39);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5rem;
+  font-family: Poppins;
+}
+header {
+  background-color: var(--rosadito);
+  height: 70px;
+  max-width: 100%;
+  padding: 1em;
+  font-family: Poppins;
+  font-weight: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header img {
+  padding: 3px 3px;
+}
+
+#botones {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+nav {
+  display: flex;
+  margin-right: auto;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  padding: 3 rem;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: rgb(20, 11, 145);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(99, 145, 244);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #97b3f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.seccioness {
+  border: 3px double seagreen;
+  height: 400px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0.5rem 0rem 0.5rem;
+}
+
+.primeraSection {
+  width: 10%;
+  height: 10rem;
+  background-color: antiquewhite;
+  box-shadow: 3px 3px 4px rgb(168, 97, 79);
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.sakuraimg {
+  width: 20%;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.modalLogin {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: --rosadito-fuerte;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenido ventana Modal */
+.modalLogin-content {
+  background-color: var(--rosadito-fuerte);
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  color: var(--blanco-humo);
+  box-shadow: 3px 3px 4px   var(--rosadito-refuerte);
+}
+
+/* Botón de cierre */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--blanco-humo);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+}
+
+/* Inputs */
+.modalLogin-content label {
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modalLogin-content input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  background-color: var(--blanco-humo);
+  color: black;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Botones ventana modal */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  background-color: var(--rosadito-medio);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.modal-buttons button:hover {
+  background-color: var(--rosadito-hover);
+}
+
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--rosadito-medio);
+}
+
+/* Tabla Administrador */
+
+
+label{
+  font-weight:300;
+  color: var(--blanco-humo);
+  padding: 3px 0px;
+}
+
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: thin solid black;
+  border-collapse: collapse;
+  border-radius: 8px;
+
+}
+
+th,
+td {
+  border: 2px solid var(--rosadito-fuerte);
+  padding: 4px;
+  text-align: center;
+  font-size: 1em;
+}
+
+th {
+  background-color: var(--rosadito-medio);
+  color: var(--blanco-humo);
+  font-size: 1.1em;
+
+}
+
+input{
+  padding: 0.5em;
+}
+
+.acciones a {
+  text-decoration: none;
+}
+
+.modal {
+  display: none; /*Oculta el elemento y elimina su espacio en la página.*/
+  position: fixed; /*permanece en la misma posición en la pantalla, incluso al hacer scroll.*/
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(65, 4, 22, 0.3);
+}
+
+.modal-content {
+  background-color: var(--rosadito-fuerte);
+  color: var(--blanco-humo);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+
+
+.detalles-usuario{
+  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detalles-usuario input[type="submit"]{
+  cursor: pointer;
+  width: 50%;
+  margin: 1rem auto;
+  background-color: var(--blanco-humo);
+  color: var(--rosadito-medio);
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 8px;
+}
+
+.detalles-usuario input[type="submit"]:hover{
+  background-color: var(--rosadito-hover);
+  color: var(--blanco-humo);
+  
+}
+
+.adminMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.3rem 1rem;
+  font-family: Poppins;
+
+}

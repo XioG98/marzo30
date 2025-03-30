@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+    <header>
+
+        <a href="#"><img src="sakura-7420568_1280.png" alt=" LOGO" width="40"></a>
+        <nav>
+            
+
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                      <a href="registrarProducto.html">Registrar</a>
+                      <a href="listar.html">Listar</a>
+                    </div>
+                </li>
+            </ul>
+
+            
+        </nav>
+
+        <div id=" botones">
+
+            <button id="loginButton"><a href="#">Cerrar Sesion</a></button>
+        </div>
+    </header>
+
+<main class="adminMain">
+
+    <table>
+        <thead>
+          <tr>
+          <!-- table head - Agrupa encabezado de la tabla -->
+          <th>ID</th>
+          <!-- table header - celda de encabezado -->
+          <th>Nombre</th>
+          <th>Ocupacion</th>
+          <th>Ofertas ejecutadas</th>
+          <th>Acciones</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <!-- table body - Agrupa el contenido de la tabla -->
+          <tr>
+            <!-- table rows (filas)  -->
+            <td>1</td>
+            <!-- table data - datos de tabla -->
+            <td>Juan Carlos Vergel</td>
+            
+            <td>Jardinero</td>
+            <td>15</td>
+            <td class="acciones">
+              <a href="#" onclick="abrirModal('verUsuario')">
+                <span class="material-icons">visibility</span>
+              </a>
+              <a href="#" onclick="abrirModal('editarUsuario')">
+                <span class="material-icons">edit</span>
+              </a>
+              <a href="#" onclick="abrirModal('eliminarUsuario')">
+                <span class="material-icons">delete</span>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <!-- Modales -->
+      <div id="verUsuario" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="cerrarModal('verUsuario')">&times;</span>
+          <h2>Ver Usuario</h2>
+          <form class="detalles-usuario">
+            <label for="idUsuario">Identificador del usuario</label>
+            <input type="text" id="idUsuario" value="1" disabled />
+            <br />
+            <label for="nombreUsuario">Nombre del Usuario</label>
+            <input type="text" id="nombreUsuario" value="Usuario X" disabled />
+            <br />
+            <label for="ocupacion">Ocupacion</label>
+            <input type="text" id="ocupacion" value="Jardinero" disabled />
+            <br />
+            <label for="descripcionUsuario">Descripción del Usuario</label>
+            <textarea id="descripcionUsuario" maxlength="500" rows="4" cols="20" disabled>Breve descripcion del usuario</textarea>
+            <br />
+            <label for="rolUsuario">Rol</label>
+            <input type="text" id="rolaUsuario" value="Empleado" disabled />
+            <br />
+            <label for="postulacionesTotal">Total postulaciones</label>
+            <input type="number" id="postulacionesTotal" value="15" disabled />
+            <br />
+            <label for="postulacionesEjecutadas">Total postulaciones ejecutadas</label>
+            <input type="number" id="postulacionesEjecutadas" value="5" disabled /> 
+
+
+          </form>
+        </div>
+      </div>
+  
+      <div id="editarUsuario" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="cerrarModal('editarUsuario')">X</span>
+          <h2>Editar Usuario</h2>
+          <form class="detalles-usuario" onsubmit="guardarYCerrar( 'editarUsuario')">
+            <label for="idUsuario">Identificador del usuario</label>
+            <input type="text" id="idUsuario" value="1" />
+            <br />
+            <label for="nombreUsuario">Nombre del Usuario</label>
+            <input type="text" id="nombreUsuario" value="Usuario X" />
+            <br />
+            <label for="ocupacion">Ocupacion</label>
+            <input type="text" id="ocupacion" value="Jardinero" />
+            <br />
+            <label for="descripcionUsuario">Descripción del Usuario</label>
+            <textarea id="descripcionUsuario" maxlength="500" rows="4" cols="20">Breve descripcion del usuario</textarea>
+            <br />
+            <label for="rolUsuario">Rol</label>
+            <input type="text" id="rolaUsuario" value="Empleado"  />
+            <br />
+            <label for="postulacionesTotal">Total postulaciones</label>
+            <input type="number" id="postulacionesTotal" value="15"  />
+            <br />
+            <label for="postulacionesEjecutadas">Total postulaciones ejecutadas</label>
+            <input type="number" id="postulacionesEjecutadas" value="5"  />
+            <br />
+            <input type="submit" value="Guardar cambios" />
+          </form>
+        </div>
+      </div>
+  
+      <div id="eliminarUsuario" class="modal">
+        <div class="modal-content">
+          <form class="detalles-usuario" onsubmit="guardarYCerrar( 'eliminarUsuario')">
+            <span class="close" onclick="cerrarModal('eliminarUsuario')">X</span>
+            <h2>Eliminar Usuario</h2>
+            <p>¿Estás seguro de que deseas eliminar este usuario?</p>
+            <input type="submit" value="Eliminar" />
+          </form>
+        </div>
+      </div>
+  
+        <script src="script.js"></script>
+</main>
+
+</body>
+</html>

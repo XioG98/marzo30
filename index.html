@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+
+        <a href="#"><img src="sakura-7420568_1280.png" alt=" LOGO" width="40"></a>
+        <nav>
+            
+
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                    <div class="dropdown-content">
+                      <a href="registrarProducto.html">Registrar</a>
+                      <a href="listar.html">Listar</a>
+                    </div>
+                </li>
+            </ul>
+
+            
+        </nav>
+
+        <div id=" botones">
+
+            <button id="loginButton"><a href="#">Iniciar Sesion</a></button>
+            <button id="registroButton"><a href="#">Registrarse</a></button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="seccioness">
+<article class="primeraSection">UNO</article>
+<article class="primeraSection">DOS</article>
+<article class="primeraSection">TRES</article>
+<article class="primeraSection">CUATRO</article>
+<article class="primeraSection">CINCO</article>
+<article class="primeraSection">SEIS</article>
+        </section>
+      
+
+        <section class="seccioness">
+<img class="sakuraimg" src="unnamed.webp" alt="">
+<img class="sakuraimg" src="unnamed.webp" alt="">
+<img class="sakuraimg" src="unnamed.webp" alt="">
+<img class="sakuraimg" src="unnamed.webp" alt="">
+
+
+
+        </section>
+        <section></section>
+        <section></section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- Ventana Modal -->
+    <div id="modal-login" class="modalLogin">
+      <div class="modalLogin-content">
+          <button class="close" onclick="closeModal()">&times;</button>
+          <h2>Iniciar sesión</h2>
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" placeholder="Ingrese su usuario">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="Ingrese su contraseña">
+          <div class="modal-buttons">
+              <button id="btn-ingresar" onclick="openAdmin()">Ingresar</button>
+              <button id="btn-limpiar" onclick="clearFields()">Limpiar</button>
+          </div>
+      </div>
+  </div>
+</body>
+
+
+
+
+<script>
+  function openModal() {
+      document.getElementById('modal-login').style.display = 'flex';
+  }
+
+  function closeModal() {
+      document.getElementById('modal-login').style.display = 'none';
+  }
+
+  function clearFields() {
+      document.getElementById('usuario').value = "";
+      document.getElementById('password').value = "";
+  }
+
+  function openAdmin(){
+    if(usuario.value=='xio@gmail.com' && password.value=='123'){
+        window.open('admin.html')
+    }
+
+}
+
+
+
+</script>
+
+
+
+</html>
