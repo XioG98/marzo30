@@ -34,9 +34,24 @@ header img {
 }
 
 #botones {
+  
   margin-left: auto;
   display: flex;
   gap: 10px;
+}
+
+.buttonLanding{
+  background-color: var(--rosadito-fuerte);
+  color: var(--blanco-humo);
+  border: none;
+  border-radius: 8px ;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.buttonLanding:hover{
+background-color: var(--rosadito-hover);
+box-shadow: 0 1px 5px rgb(65, 4, 22, 0.6);
 }
 
 nav {
